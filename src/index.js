@@ -1,11 +1,19 @@
-
+const submitcityname=document.getElementById('submitcityname');
+const cityname=document.getElementById('cityname');
 const apiKey='3903e98485bd41ca831171844240804';
-const city='london';
-const url=`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`
+
+submitcityname.addEventListener('click',()=>{
+    
+    fetchApi();
+})
+
 
 
 
 async function fetchApi(){
+    const city=cityname.value;
+    const url=`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`
+
     try{
     const response=await fetch(url);
     const data=await response.json();
@@ -19,18 +27,5 @@ async function fetchApi(){
     }
 
 }
-
-async function displayWeather(){
-    const weatherData=await response;
-    if(weatherData){
-        console.log(weatherData)
-
-    }
-    else{
-        console.log("Failed to fetch weather api")
-    }
-}
-
-fetchApi();
 
 
