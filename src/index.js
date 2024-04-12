@@ -20,9 +20,11 @@ async function fetchApi(){
         const data=await response.json();
         console.log(data)
         const weatherdiv=document.getElementById("weathercardContainer");
-        weatherdiv.innerHTML=`<ul>Temperature:${data.current.feelslike_c}C</ul>
-                              <ul>Wind:${data.current.wind_kph}  kph</ul>
-                              <ul>Humidity:${data.current.humidity}</ul>  `;
+        weatherdiv.innerHTML=`<div id="weathercardContent">
+                                <ul id="temp">Temperature:${data.current.feelslike_c}C</ul>
+                                <ul id="wind">Wind:${data.current.wind_kph}  kph</ul>
+                                <ul id="humidity">Humidity:${data.current.humidity}</ul> 
+                              </div> `;
     }
     catch(error){
         console.log("Error Fetching API data",error);
@@ -32,6 +34,17 @@ async function fetchApi(){
 
 }
 
+
+/*
+async function formContainerEmoji(){
+    const weatheremoji= await document.getElementById('temp')
+    if(weatheremoji.value>20){
+        console.log('Hot')
+        
+    }
+}
+formContainerEmoji();
+*/
 
 
 
