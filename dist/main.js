@@ -1,1 +1,1 @@
-(()=>{const o=fetch("https://api.weatherapi.com/v1/current.json?key=3903e98485bd41ca831171844240804&q=london");console.log(o)})();
+!async function(){try{const o=await fetch("https://api.weatherapi.com/v1/current.json?key=3903e98485bd41ca831171844240804&q=london"),c=await o.json();console.log(c),console.log("succesfully fetched")}catch(o){return console.log("Error Fethching api data",o),null}}();
