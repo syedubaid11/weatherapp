@@ -1,0 +1,31 @@
+body{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+.heading{
+    display: flex;
+    margin-left:0.4rem;
+    font-size: 1.5rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.weathercardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.weathercardContent{
+    background-color: orange;
+    margin-top:5rem;
+    height:20rem;
+    width: 50rem;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

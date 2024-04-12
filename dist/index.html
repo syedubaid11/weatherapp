@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Cast</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <heading class="heading">
@@ -11,10 +12,21 @@
     </heading>
 
     <form class="form-container">
-        <label for="City">City</label><br>
-        <input type="text" id="cityname" ><br>
+        <label for="City">City</label>
+        <input type="text" id="cityname" >
+        <button id="submitcityname">Submit</button>
+
     </form>
-    <button id="submitcityname">Submit</button>
+
+
+
+    <div class="weathercardContainer">
+        <div class="weathercardContent">
+            <ul id="temperature"></ul>
+            <ul id="wind"></ul>
+            <ul id="weather"></ul>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 
