@@ -1,12 +1,14 @@
 const submitcityname=document.getElementById('submitcityname');
 const cityname=document.getElementById('cityname');
 const apiKey='5f3744c6037d48dd9f2161349241204';
+const weather=null;
 
 
 submitcityname.addEventListener('click',(e)=>{
     e.preventDefault();
     console.log("in process")
     fetchApi();
+    backgroundchangeWeather();
 
 })
 
@@ -18,7 +20,9 @@ async function fetchApi(){
     try{    
         const response=await fetch(url);
         const data=await response.json();
+        const weather=data.current.feelslike_c;
         console.log(data)
+        console.log(weather)
         const weatherdiv=document.getElementById("weathercardContainer");
         weatherdiv.innerHTML=`<div id="weathercardContent">
                                 <ul id="temp">Temperature:${data.current.feelslike_c}C</ul>
@@ -35,16 +39,14 @@ async function fetchApi(){
 }
 
 
-/*
-async function formContainerEmoji(){
-    const weatheremoji= await document.getElementById('temp')
-    if(weatheremoji.value>20){
-        console.log('Hot')
-        
+function backgroundchangeWeather(){
+    if(weather>20){
+        console.log('working')
     }
+    else{
+        console.log('not working')
+    }
+    
 }
-formContainerEmoji();
-*/
-
 
 
