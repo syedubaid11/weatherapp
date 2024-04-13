@@ -24,14 +24,19 @@ async function fetchApi(){
         console.log(data)
         console.log(weather)
         const weatherdiv=document.getElementById("weathercardContainer");
+
         weatherdiv.innerHTML=`<div id="weathercardContent">
                                 <ul id="temp">Temperature:${data.current.feelslike_c}C</ul>
                                 <ul id="wind">Wind:${data.current.wind_kph}  kph</ul>
                                 <ul id="humidity">Humidity:${data.current.humidity}</ul> 
-                                <ul id="weather">${data.current.condition.text}</ul>
+                                <ul id="weather">${data.current.condition.text}</ul>    
                               </div> `;
     }
     catch(error){
+        const weatherdiv=document.getElementById("weathercardContainer");
+        weatherdiv.innerHTML=`<div id="weathercardContent">
+        <span style='color: red;'><h1>Invalid City</h1></span>`
+
         console.log("Error Fetching API data",error);
         return null;
 
@@ -40,14 +45,11 @@ async function fetchApi(){
 }
 
 
-function backgroundchangeWeather(){
-    if(weather>20){
-        console.log('working')
-    }
-    else{
-        console.log('not working')
-    }
+
+
+
+
     
-}
+
 
 

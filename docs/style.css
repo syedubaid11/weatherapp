@@ -20,12 +20,17 @@ body{
 }
 
 #weathercardContent{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap:wrap;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ;
     background-color:white;
     margin-top:5rem;
     height:10rem;
     width: 30rem;
     border-radius: 1rem;
+
     
     
 }
