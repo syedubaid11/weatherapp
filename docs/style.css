@@ -52,9 +52,12 @@ body{
 #cityname{
     margin:0.3rem;
     padding:0.3rem;
+    border-radius: 5rem;
+    border:solid black 0.11rem;
+
 }
 #submitcityname{
-    border:none;
+    border:solid black 0.11rem;
     padding:0.4rem;
     border-radius:5rem;
 }
