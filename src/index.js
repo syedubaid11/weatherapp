@@ -26,10 +26,10 @@ async function fetchApi(){
         const weatherdiv=document.getElementById("weathercardContainer");
 
         weatherdiv.innerHTML=`<div id="weathercardContent">
-                                <ul id="temp">Temperature:${data.current.feelslike_c}C</ul>
-                                <ul id="wind">Wind:${data.current.wind_kph}  kph</ul>
-                                <ul id="humidity">Humidity:${data.current.humidity}</ul> 
-                                <ul id="weather">${data.current.condition.text}</ul>    
+                                <ul id="temp">Temperature🌡️: ${data.current.feelslike_c}C</ul>
+                                <ul id="wind">Wind💨: ${data.current.wind_kph}  kph</ul>
+                                <ul id="humidity">Humidity💧: ${data.current.humidity}</ul> 
+                                <ul id="weather">Weather Condition: ${data.current.condition.text}</ul>    
                               </div> `;
     }
     catch(error){

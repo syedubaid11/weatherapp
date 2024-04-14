@@ -2,49 +2,101 @@ body{
     margin:0px;
     padding:0px;
     box-sizing:border-box;
-    background-color:lightblue;
+    background-color:white;
 }
 .heading{
     display: flex;
-    justify-content: center;
-    margin-left:0.4rem;
+    background-color: black;
+    justify-content: flex-start;
     font-size: 1.5rem;
+    color:white;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
+
 #weathercardContainer{
     display: flex;
     justify-content: center;
     align-items: center;
 
     
+
+    
 }
 
 #weathercardContent{
     display: flex;
-    align-items: center;
+    align-items:flex-start;
     flex-direction: column;
     flex-wrap:wrap;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ;
     background-color:white;
-    margin-top:5rem;
-    height:10rem;
+    margin-top:4rem;
+    height:max-content;
     width: 30rem;
     border-radius: 1rem;
 
     
     
 }
-#cityname:hover{
-    filter: drop-shadow(0 0 2em #646cffaa);
-}
+
 .form-container{
     display: flex;
     justify-content: center;
     align-items: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ;
+    margin-top:3.5rem;
 
     
 }
 #cityname{
     margin:0.3rem;
+    padding:0.3rem;
 }
+#submitcityname{
+    border:none;
+    padding:0.4rem;
+    border-radius:5rem;
+}
+
+#submitcityname:hover{
+    cursor: pointer;
+}
+
+#footer{
+  position: fixed;
+  left: 0;
+  bottom:0;
+  width: 100%;
+  background-color:black;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+
+
+a:link {
+    color:white;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+a:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+a:hover {
+    color:white;
+  }
+  
+  /* selected link */
+a:active {
+    color: white;
+  }
