@@ -60,11 +60,12 @@ body{
     border:solid black 0.11rem;
     padding:0.4rem;
     border-radius:5rem;
-    background-color: none;
+    background: none;
 }
 
 #submitcityname:hover{
     cursor: pointer;
+    background: rgb(198, 196, 196);
 }
 
 #footer{
